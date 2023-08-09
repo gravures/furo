@@ -3,8 +3,21 @@
 // to select the relevant items.
 
 // API docs!
+
+// Class Bases
+dl[class]:is(.class)
+  > dt + dd > p:first-of-type
+    text-align: right
+    font-size: var(--font-size--small--2)
+
 dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)
   // Tweak the spacing of all the things!
+
+  // spacing
+  margin-top: 3rem
+  dl
+    margin-top: 1rem
+
   dd
     margin-left: 2rem
     > :first-child
@@ -19,7 +32,7 @@ dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.
     // "Headings" (like "Parameters" and "Return")
     > dt
       text-transform: uppercase
-      font-size: var(--font-size--small)
+      font-size: var(--api-headings-font-size)
 
     dd:empty
       margin-bottom: 0.5rem
@@ -39,7 +52,7 @@ dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.
     color: var(--color-api-overall)
 
 .sig:not(.sig-inline)
-  font-weight: bold
+  font-weight: normal
 
   font-size: var(--api-font-size)
   font-family: var(--font-stack--monospace)
@@ -49,6 +62,9 @@ dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.
   padding-top: 0.25rem
   padding-bottom: 0.25rem
   padding-right: 0.5rem
+
+  border-top: 1px solid var(--color-background-border)
+  border-bottom: 1px solid var(--color-background-border)
 
   // These are intentionally em, to properly match the font size.
   padding-left: 3em
@@ -81,6 +97,17 @@ em.property
   color: var(--color-api-paren)
 .sig-param
   font-style: normal
+  color: var(--color-api-sig-param)
+  .p + .w + .n
+    font-style: italic
+    color: var(--color-api-type-hint)
+.sig-return
+  font-style: italic
+  color: var(--color-api-type-hint)
+.property
+  .sig-name + .property > .p ~ *
+    font-style: italic
+    color: var(--color-api-type-hint)
 
 .versionmodified
   font-style: italic

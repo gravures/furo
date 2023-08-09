@@ -30,14 +30,19 @@
   --color-brand-primary: #2962ff;
   --color-brand-content: #2a5adf;
 
+  //
+  --color-of-interest: #630c0c;
+
   // API documentation
   --color-api-background: var(--color-background-hover--transparent);
   --color-api-background-hover: var(--color-background-hover);
   --color-api-overall: var(--color-foreground-secondary);
-  --color-api-name: var(--color-problematic);
-  --color-api-pre-name: var(--color-problematic);
-  --color-api-paren: var(--color-foreground-secondary);
+  --color-api-name: var(--color-of-interest);
+  --color-api-pre-name: var(--color-of-interest);
+  --color-api-paren: var(--color-foreground-primary);
   --color-api-keyword: var(--color-foreground-primary);
+  --color-api-sig-param: var(--color-foreground-primary);
+  --color-api-type-hint: var(--color-foreground-secondary);
   --color-highlight-on-target: #ffffcc;
 
   // Inline code background
@@ -86,20 +91,14 @@
   --color-sidebar-link-text--top-level: var(--color-brand-primary);
 
   --color-sidebar-item-background: var(--color-sidebar-background);
-  --color-sidebar-item-background--current: var(
-    --color-sidebar-item-background
-  );
-  --color-sidebar-item-background--hover: linear-gradient(
-    90deg,
-    var(--color-background-hover--transparent) 0%,
-    var(--color-background-hover) var(--sidebar-item-spacing-horizontal),
-    var(--color-background-hover) 100%
-  );
+  --color-sidebar-item-background--current: var(--color-sidebar-item-background);
+  --color-sidebar-item-background--hover: linear-gradient(90deg,
+      var(--color-background-hover--transparent) 0%,
+      var(--color-background-hover) var(--sidebar-item-spacing-horizontal),
+      var(--color-background-hover) 100%);
 
   --color-sidebar-item-expander-background: transparent;
-  --color-sidebar-item-expander-background--hover: var(
-    --color-background-hover
-  );
+  --color-sidebar-item-expander-background--hover: var(--color-background-hover);
 
   --color-sidebar-search-text: var(--color-foreground-primary);
   --color-sidebar-search-background: var(--color-background-secondary);
@@ -148,6 +147,9 @@
   // Brand colors
   --color-brand-primary: #2b8cee;
   --color-brand-content: #368ce2;
+
+  //
+  --color-of-interest: #c22c2c;
 
   // Highlighted text (search)
   --color-highlighted-background: #083563;

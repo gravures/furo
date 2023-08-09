@@ -16,7 +16,7 @@ body
 
 // Line height from Bootstrap 4.1
 article
-  line-height: 1.5
+  line-height: 1.666
 
 //
 // Headings
@@ -42,14 +42,14 @@ h6
     margin-top: 0
 
 h1
-  font-size: 2.5em
+  font-size: 2.0em
   margin-top: 1.75rem
-  margin-bottom: 1rem
+  margin-bottom: 2rem
 h2
-  font-size: 2em
+  font-size: 1.666em
   margin-top: 1.75rem
 h3
-  font-size: 1.5em
+  font-size: 1.33em
 h4
   font-size: 1.25em
 h5
@@ -63,8 +63,21 @@ small
 
 // Paragraph
 p
-  margin-top: 0.5rem
-  margin-bottom: 0.75rem
+  margin-top: 1rem
+  margin-bottom: 0rem
+
+article > section
+  > p
+    text-indent: 1em
+    -webkit-margin-before: 0em
+    -webkit-margin-after: 0em
+    margin-bottom: 0px
+    margin-top: 0px
+
+  > p:first-of-type, > p:empty + p, > center p
+    text-indent: 0
+    margin-top: 1rem
+    margin-bottom: 0px
 
 // Horizontal rules
 hr.docutils
