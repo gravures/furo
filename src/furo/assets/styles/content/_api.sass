@@ -14,14 +14,14 @@ dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.
   // Tweak the spacing of all the things!
 
   // spacing
-  margin-top: 3rem
-  dl
-    margin-top: 1rem
+  margin-top: 2rem
+  // dl
+    // margin-top: 0.125rem
 
   dd
     margin-left: 2rem
     > :first-child
-      margin-top: 0.125rem
+      margin-top: 1rem
     > :last-child
       margin-bottom: 0.75rem
 
@@ -32,12 +32,17 @@ dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.
     // "Headings" (like "Parameters" and "Return")
     > dt
       text-transform: uppercase
+      letter-spacing: 0.1em
       font-size: var(--api-headings-font-size)
+      margin-top: 1em
 
     dd:empty
       margin-bottom: 0.5rem
     dd > ul
+      margin-top: 0
       margin-left: -1.2rem
+      p
+        margin-top: 0
       > li
         > p:nth-child(2)
           margin-top: 0
